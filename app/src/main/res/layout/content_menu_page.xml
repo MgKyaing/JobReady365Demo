@@ -8,9 +8,9 @@
     tools:context="com.trustinno.win.jobagtrustinno.MainActivity">
 
 
-<LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/nav_header_height"
+        android:layout_height="166dp"
         android:background="@drawable/nav_header"
         android:gravity="bottom"
         android:orientation="vertical"
@@ -43,6 +43,57 @@
             android:text="Trusted ICT Solution" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
+
+            <TextView
+                android:text="@string/JCategory"
+                android:layout_width="match_parent"
+                android:id="@+id/textView3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:hint="... Job type or company name" />
+
+            <TextView
+                android:text="@string/JLocation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/textView4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:hint="              City or Division" />
+
+            <Button
+                android:text="Search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2"
+                android:layout_weight="0.21" />
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -23,9 +23,8 @@
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="101dp"
-        android:id="@+id/button" />
+        android:id="@+id/button"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>
