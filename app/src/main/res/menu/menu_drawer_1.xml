@@ -3,34 +3,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_jobseekers"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Job Seekers" >
+            android:icon="@drawable/ic_person_black"
+            android:title="Employer" >
 
         </item>
         <item
-            android:icon="@drawable/ic_menu_send"
-            android:title="Employers"
+            android:icon="@drawable/ic_perm_identity_black_24dp"
+            android:title="Employee"
             android:id="@+id/nav_employers" ></item>
         <item
-            android:id="@+id/nav_aboutus"
-            android:icon="@drawable/ic_menu_send"
-            android:title="About Us" />
-        <item
-            android:id="@+id/nav_contactus"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Contact Us" />
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Profile" />
+
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Share " />
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/ic_forward_black_24dp"
+                android:title="About Us " />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_contactus"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Contact Us" />
         </menu>
     </item>
 

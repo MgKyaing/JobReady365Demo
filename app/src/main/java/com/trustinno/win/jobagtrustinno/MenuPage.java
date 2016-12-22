@@ -77,7 +77,7 @@ public class MenuPage extends AppCompatActivity implements NavigationView.OnNavi
 
         } else if (id == R.id.nav_aboutus) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_profile) {
 
         }
 
