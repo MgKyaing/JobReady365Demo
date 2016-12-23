@@ -59,7 +59,7 @@
             android:weightSum="1">
 
             <TextView
-                android:text="@string/JCategory"
+                android:text="Search by Category :"
                 android:layout_width="match_parent"
                 android:id="@+id/textView3"
                 style="@style/MyTextviewStyle1"
@@ -94,7 +94,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/MyTextviewStyle1"
+
                 android:id="@+id/btn_search"
+
                 android:layout_weight="0.21" />
         </LinearLayout>
     </RelativeLayout>

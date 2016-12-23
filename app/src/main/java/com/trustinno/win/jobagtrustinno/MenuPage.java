@@ -12,17 +12,47 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
 public class MenuPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    public Button b1;
-
+    private static Button b1;
+    private static AutoCompleteTextView autoCom1,autoCom2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_page);
+
+        autoCom1=(AutoCompleteTextView)findViewById(R.id.autocom_category);
+        autoCom2=(AutoCompleteTextView)findViewById(R.id.autocom_city);
+
+        // autoComplettextview for category
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, DataSet.job_category);
+        autoCom1 = (AutoCompleteTextView) findViewById(R.id.autocom_category);
+        autoCom1.setThreshold(1);
+        autoCom1.setAdapter(adapter1);
+
+
+
+
+        // autoComplettextview for city/division
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, DataSet.city_div);
+        autoCom2 = (AutoCompleteTextView) findViewById(R.id.autocom_city);
+        autoCom2.setThreshold(1);
+        autoCom2.setAdapter(adapter2);
+
+
+        b1=(Button)findViewById(R.id.btn_search);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
