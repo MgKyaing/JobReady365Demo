@@ -66,15 +66,13 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 android:layout_height="50dp" />
 
-            <EditText
+            <AutoCompleteTextView
+                android:text=""
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="textPersonName"
-
-                android:ems="10"
-                android:id="@+id/edtext_category"
-                android:hint="... Job type or company name"
-                style="@style/AlertDialog.AppCompat" />
+                android:id="@+id/autocom_category"
+                style="@style/AlertDialog.AppCompat"
+                android:hint="Company name or Category " />
 
             <TextView
                 android:text="@string/JLocation"
@@ -84,14 +82,12 @@
                 android:id="@+id/textView4"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="textPersonName"
-                style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
-                android:ems="10"
-                android:id="@+id/edtext_location"
-                android:hint=" City or Division" />
+                android:id="@+id/autocom_city"
+                android:hint="City and Division"
+                style="@style/AlertDialog.AppCompat"/>
 
             <Button
                 android:text="Search"

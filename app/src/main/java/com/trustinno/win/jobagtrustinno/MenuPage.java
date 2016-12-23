@@ -12,8 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MenuPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    public Button b1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
