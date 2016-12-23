@@ -15,16 +15,24 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView2" />
+        android:text="@string/text_with_paragraphs"
+        android:layout_height="50dp"
+        style="@style/MyTextviewStyle1"
+        android:id="@+id/textView2"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
 
     <Button
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView2"
+        style="@style/MyButton.Orange.Gradient"
+        android:id="@+id/btn_starter"
+        android:layout_marginBottom="48dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp" />
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

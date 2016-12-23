@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        b1=(Button)findViewById(R.id.button);
+        b1=(Button)findViewById(R.id.btn_starter);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
