@@ -68,7 +68,7 @@ public class JobsView extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //getting values from selected ListItem
-                String job_id = ((TextView) view.findViewById(R.id.Job_Id)).getText().toString();
+                String job_id = ((TextView) view.findViewById(R.id.job_id_tv)).getText().toString();
 
                 //starting new Intent
                 Intent intent = new Intent(getApplication(), JobsView.class);
