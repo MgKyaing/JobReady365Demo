@@ -2,11 +2,10 @@
 <resources>
     <item name="ic_menu_myGradient" type="drawable">@drawable/my_gradient</item>
     <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
-    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
-    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
-    <item name="ic_account_box" type="drawable">@drawable/ic_account_box</item>
 
-    <item name="ic_person_black" type="drawable">@drawable/ic_person_black</item>
+
+
+    <item name="login" type="drawable">@drawable/bg_new</item>
 
 
 

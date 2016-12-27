@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+  <!--  Created by Win on 12/23/2016. -->
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
@@ -12,11 +15,17 @@
             android:title="Employee"
             android:id="@+id/nav_employers" ></item>
         <item
-            android:id="@+id/nav_profile"
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_people_outline_black_24dp"
+        android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_profileEdit"
             android:icon="@drawable/ic_people_outline_black_24dp"
-            android:title="Profile" />
+            android:title="Edit Profile" />
 
     </group>
+
 
     <item android:title="Communicate">
         <menu>

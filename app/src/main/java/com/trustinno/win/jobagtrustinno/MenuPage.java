@@ -16,6 +16,11 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
+/**
+ * Created by Win on 12/23/2016.
+ */
+
+
 public class MenuPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private static Button b1;
@@ -30,7 +35,7 @@ public class MenuPage extends AppCompatActivity implements NavigationView.OnNavi
         autoCom2=(AutoCompleteTextView)findViewById(R.id.autocom_city);
 
         // autoComplettextview for category
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, DataSet.job_category);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, DataSet.allJobcategory);
         autoCom1 = (AutoCompleteTextView) findViewById(R.id.autocom_category);
         autoCom1.setThreshold(1);
         autoCom1.setAdapter(adapter1);
