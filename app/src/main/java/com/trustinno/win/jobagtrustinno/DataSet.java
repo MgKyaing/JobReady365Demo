@@ -31,11 +31,13 @@ public class DataSet {
             "Consulting", "Toursism/Travel Services"};
 
 
-    protected static double[] salary = { 99.999, 100.000, 249.999, 250.000, 499.999, 500.000, 749.999, 750.000};
+    protected static double[] salary = {99.999, 100.000, 249.999, 250.000, 499.999, 500.000, 749.999, 750.000};
 
 
-    protected  String[] contractType = {"Full Time", "Part Time", "Other", "Intership", "Traineeship", "Contract"};
+    protected String[] contractType = {"Full Time", "Part Time", "Other", "Intership", "Traineeship", "Contract"};
 
+// Test!!!!
+    protected String[][] jobs = {{"1", "17.12.2016", "MSIP Planning and design", "Nyclet Technology myanmar mpe"},
+            {"2", "28.12.2016", "akfjlajfklajfkla", "djlajfkjaljfla"}};
 
-    private  String[] companyName = {"UMG", "Capital Diamond Star Group", "Thanlwin InternationalCo."};
 }
