@@ -11,24 +11,31 @@
     tools:context="com.trustinno.win.jobagtrustinno.MainActivity">
 
 
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 
-
-            <android.support.v7.widget.ButtonBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/button_to_next"
-                    android:text="@string/action_sign_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
-
-            </android.support.v7.widget.ButtonBarLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/app_intro"/>
 
 
+</ScrollView>
+    <android.support.v7.widget.ButtonBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
 
+        <Button
+            android:id="@+id/button_to_next"
+            android:text="@string/action_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            />
 
+    </android.support.v7.widget.ButtonBarLayout>
 
 </RelativeLayout>
