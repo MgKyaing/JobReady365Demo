@@ -23,10 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MenuPage"
-            android:label="@string/title_activity_menu_page"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

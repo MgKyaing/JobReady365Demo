@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="ic_menu_myGradient" type="drawable">@drawable/my_gradient</item>
-    <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
-    <item name="login" type="drawable">@drawable/bg_new</item>
+
 </resources>

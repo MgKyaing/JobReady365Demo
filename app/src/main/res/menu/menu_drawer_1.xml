@@ -6,22 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_jobseekers"
-            android:icon="@drawable/ic_person_black"
+
             android:title="Employer" >
 
         </item>
         <item
-            android:icon="@drawable/ic_perm_identity_black_24dp"
             android:title="Employee"
             android:id="@+id/nav_employers" ></item>
         <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_people_outline_black_24dp"
         android:title="Profile" />
 
         <item
             android:id="@+id/nav_profileEdit"
-            android:icon="@drawable/ic_people_outline_black_24dp"
             android:title="Edit Profile" />
 
     </group>
@@ -31,11 +28,10 @@
         <menu>
             <item
                 android:id="@+id/nav_aboutus"
-                android:icon="@drawable/ic_android_black_24dp"
                 android:title="About Us " />
             <item
                 android:id="@+id/nav_contactus"
-                android:icon="@drawable/ic_android_black_24dp"
+
                 android:title="Contact Us" />
         </menu>
     </item>
