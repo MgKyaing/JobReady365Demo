@@ -7,5 +7,4 @@
     <string name="JCategory"> Search by category \n: </string>
     <string name="JLocation"> Search by Location  :\n </string>
     <string name="title_activity_jobs">JobsActivity</string>
-
 </resources>
