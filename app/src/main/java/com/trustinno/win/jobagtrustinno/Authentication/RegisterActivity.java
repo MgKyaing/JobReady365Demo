@@ -27,7 +27,9 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +55,9 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
+
+
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -63,7 +68,8 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-
+    private Spinner spinner_1,spinner_2;
+    Button  register_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +78,9 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
-
+        addItemsOnSpinnerType();
+        addListenerOnButton();
+        addListenerOnSpinnerItemSelection();
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -86,16 +94,51 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
-
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+
+    private void addItemsOnSpinnerType() {
+
+            spinner_2=(Spinner)findViewById(R.id.spinner_2);
+        spinner_2 = (Spinner) findViewById(R.id.spinner_2);
+        List<String> list = new ArrayList<String>();
+        list.add("Employer");
+        list.add("JobSeeker");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_2.setAdapter(dataAdapter);
+    }
+
+    public void addListenerOnSpinnerItemSelection() {
+        spinner_1 = (Spinner) findViewById(R.id.spinner_1);
+        spinner_1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+    }
+
+
+
+    private void addListenerOnButton() {
+
+        spinner_1 = (Spinner) findViewById(R.id.spinner_1);
+        spinner_2 = (Spinner) findViewById(R.id.spinner_2);
+        register_button = (Button) findViewById(R.id.register_button);
+
+        register_button.setOnClickListener(new OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(RegisterActivity.this,
+                        "OnClickListener : " +
+                                "\nSpinner 1 : "+ String.valueOf(spinner_1.getSelectedItem()) +
+                                "\nSpinner 2 : "+ String.valueOf(spinner_2.getSelectedItem()),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+        });
     }
 
     private void populateAutoComplete() {

@@ -8,10 +8,13 @@
     <string name="JLocation"> Search by Location  :\n </string>
     <string name="title_activity_jobs">JobsActivity</string>
     <string name="title_activity_login">Sign in</string>
-<string name="app_intro">You look so beautiful in your dress
+    <string name="app_intro">You look so beautiful in your dress
                         i love you hair like that
                         The way it falls on the side of your neck
                         Down your shoulders and back</string>
+    <string name="prompt_confirmpassword">Confirm Password</string>
+    <string name="prompt_name">Your Full Name</string>
+    <string name="prompt_phonenumber">Phonenumber</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -29,20 +32,34 @@
     <string name="newac">Create New Account</string>
     <string name="forp">Forget password?</string>
     <string name="reg_text">Register</string>
-    <string name="title_activity_register">Sing Up</string>
+    <string name="title_activity_register">Sign Up</string>
+    <!-- <string name="prompt_type">Type</string>
+    <string-array name="type_array">
+        <item>JobSeeker</item>
+        <item>Employer</item>
+    </string-array>  -->
+    <string name="occupation_prompt">Occupation</string>
+    <string-array name="occupation_array">
+
+        <item> IT</item>
+        <item> HR</item>
+        <item> Business</item>
+        <item> Sale</item>
+        <item> CarService</item>
+        <item> Delivery</item>
+    </string-array>
+    <string name="title_activity_employer">EmployerActivity</string>
 
     <!--           This is the end of authentication string                                    -->
+<!--                  This is the start of employer  drawer activity                                     -->
+    <string name="title_upload">Upload</string>
 
+    <string name="title_viewcv">View CV</string>
 
+    <string name="title_empprofile">Profile</string>
+    <!--                  This is the start of employer  drawer activity                                     -->
 
+<string name="contactus">Contact Us</string>
 
-
-
-
-
-
-
-
-
-
+    <string name="aboutus">About Us</string>
 </resources>

@@ -2,8 +2,9 @@
 <resources>
     <color name="colorPrimary">#7e57c2</color>
     <color name="colorPrimaryDark"> #673ab7</color>
+    <color name="auth_background">#673ab7</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#88ffffff</color>
+    <color name="white">#ffffff</color>
     <color name="logtext_co">#0288b1</color>
     <color name="loginbackground">#ede7f6</color>
 </resources>

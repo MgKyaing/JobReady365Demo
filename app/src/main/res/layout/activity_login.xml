@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/auth_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
@@ -33,6 +34,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:layout_marginBottom="20dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/login_text"/>
@@ -47,10 +50,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
+                    android:textStyle="bold"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true"
-                    android:textColor="@color/logtext_co"/>
+                    android:textColor="@color/white"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -68,8 +71,8 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textColor="@color/logtext_co"
-                    android:singleLine="true" />
+                    android:textColor="@color/white"
+                     />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -88,7 +91,7 @@
                 android:id="@+id/linkrecovery"
                 android:clickable="true"
                 android:autoLink="all"
-                android:textColor="@color/logtext_co"
+                android:textColor="@color/white"
                 android:paddingTop="20dp"
                 android:layout_gravity="center"
                 android:text="@string/forp"
@@ -99,18 +102,18 @@
                 android:id="@+id/linkregister"
                 android:clickable="true"
                 android:autoLink="all"
-                android:textColor="@color/logtext_co"
+                android:textColor="@color/white"
                 android:paddingTop="20dp"
                 android:layout_gravity="center"
                 android:text="@string/newac"
                 />
             <Button
-                android:id="@+id/email_sign_in_employer_button"
+                android:id="@+id/sign_in_employer_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
+                android:text="To Employer"
                 android:textStyle="bold"
                 android:background="@color/logtext_co"/>
         </LinearLayout>

@@ -33,6 +33,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.trustinno.win.jobagtrustinno.Employer.EmployerActivity;
 import com.trustinno.win.jobagtrustinno.MainActivity;
 import com.trustinno.win.jobagtrustinno.R;
 
@@ -66,13 +67,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
 private  Button b2;
+    private Button b3;
     private TextView linkregister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
-        b2=(Button)findViewById(R.id.email_sign_in_employer_button);
+        b2=(Button)findViewById(R.id.email_sign_in_button);
         b2.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +82,14 @@ private  Button b2;
                 startActivity(intent);
             }
         });
-
+        b3=(Button)findViewById(R.id.sign_in_employer_button);
+        b3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(LoginActivity.this, EmployerActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         linkregister  = (TextView)findViewById(R.id.linkregister);
