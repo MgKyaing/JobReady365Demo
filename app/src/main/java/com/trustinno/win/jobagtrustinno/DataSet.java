@@ -36,8 +36,7 @@ public class DataSet {
 
     protected String[] contractType = {"Full Time", "Part Time", "Other", "Intership", "Traineeship", "Contract"};
 
-// Test!!!!
-    protected String[][] jobs = {{"1", "17.12.2016", "MSIP Planning and design", "Nyclet Technology myanmar mpe"},
-            {"2", "28.12.2016", "akfjlajfklajfkla", "djlajfkjaljfla"}};
+
+
 
 }
