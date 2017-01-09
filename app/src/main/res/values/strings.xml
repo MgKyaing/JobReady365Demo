@@ -57,6 +57,30 @@
     <string name="companyname_employer">Company Name</string>
     <string name="description_employer">Description</string>
     <string name="position_employer">Position</string>
+    <string name="employer_price_prompt">Price</string>
+    <string-array name="employer_price_array">
+        <item>$100-$200</item>
+        <item>$200-$300</item>
+        <item>$300-$500</item>
+        <item>$500+++</item>
+    </string-array>
+    <string name="employer_jobtype_prompt"></string>
+    <string-array name="employer_jobtype_array">
+        <item> Partime</item>
+        <item> Fulltime</item>
+        <item> Contract</item>
+    </string-array>
+
+    <string name="employer_jobcategories_prompt"></string>
+    <string-array name="employer_jobcategories_array">
+
+        <item> IT</item>
+        <item> HR</item>
+        <item> Business</item>
+        <item> Sale</item>
+        <item> CarService</item>
+        <item> Delivery</item>
+    </string-array>
     <!--    end   employer_activity      -->
 
 

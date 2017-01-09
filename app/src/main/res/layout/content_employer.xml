@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/auth_background"
     android:id="@+id/content_employer"
@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
     tools:context="com.trustinno.win.jobagtrustinno.Employer.EmployerActivity"
     tools:showIn="@layout/app_bar_employer">
     <ScrollView
@@ -33,9 +33,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
 
                 <EditText
                     android:id="@+id/companyname_employer"
@@ -46,12 +44,6 @@
                     android:maxLines="1"
                 />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
                 <EditText
                     android:id="@+id/description_employer"
                     android:layout_width="match_parent"
@@ -61,11 +53,7 @@
                     android:maxLines="1"
                 />
 
-            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/employer_email"
@@ -79,11 +67,7 @@
                     android:maxLines="1"
                 />
 
-            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/position_employer"
@@ -97,58 +81,47 @@
                     android:maxLines="1"
                  />
 
-            </android.support.design.widget.TextInputLayout>
-
-
 
 
             <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/employer_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
-                android:maxLines="1"
+                android:paddingTop="15dp"
+                android:entries="@array/employer_price_array"
+                android:prompt="@string/employer_price_prompt"
+                android:maxLines="1"/>
 
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown" />
 
             <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/employer_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown" />
+                android:paddingTop="15dp"
+                android:entries="@array/employer_jobtype_array"
+                android:prompt="@string/employer_jobtype_prompt"
+                android:maxLines="1"/>
+
 
             <Spinner
-                android:id="@+id/employer_jobcategories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown" />
+                android:id="@+id/employer_jobcategories"
+                android:paddingTop="15dp"
+                android:entries="@array/employer_jobcategories_array"
+                android:prompt="@string/employer_jobcategories_prompt"
+                android:maxLines="1"/>
+
 
             <Button
                 android:id="@+id/employer_upload_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:layout_marginTop="16dp"
                 android:text="@string/up_text"
+                android:layout_marginBottom="16dp"
                 android:textStyle="bold"
                 android:background="@color/logtext_co"/>
 

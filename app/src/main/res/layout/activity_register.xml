@@ -41,9 +41,7 @@
                 android:textColor="#eeeeee"
                 android:textStyle="bold" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
 
                 <AutoCompleteTextView
                     android:id="@+id/name"
@@ -53,11 +51,6 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
                     android:id="@+id/phonenumber"
@@ -67,11 +60,7 @@
                     android:inputType="phone"
                     android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/password"
@@ -84,11 +73,7 @@
                     android:inputType="textPassword"
                     android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/confirmpassword"
@@ -101,7 +86,6 @@
                     android:inputType="textPassword"
                     android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
 
 
             <Spinner
