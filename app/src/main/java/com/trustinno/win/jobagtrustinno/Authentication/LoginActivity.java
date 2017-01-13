@@ -32,11 +32,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.trustinno.win.jobagtrustinno.Employer.EmployerActivity;
 import com.trustinno.win.jobagtrustinno.MainActivity;
 import com.trustinno.win.jobagtrustinno.R;
-
-import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * A login screen that offers login via email/password.
