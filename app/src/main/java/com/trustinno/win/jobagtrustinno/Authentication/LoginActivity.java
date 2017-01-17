@@ -32,6 +32,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.trustinno.win.jobagtrustinno.Employer.Employer;
 import com.trustinno.win.jobagtrustinno.MainActivity;
 import com.trustinno.win.jobagtrustinno.R;
 
@@ -82,7 +83,7 @@ private  Button b2;
         b3.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(LoginActivity.this, EmployerActivity.class);
+                Intent intent= new Intent(LoginActivity.this,Employer.class);
                 startActivity(intent);
             }
         });
