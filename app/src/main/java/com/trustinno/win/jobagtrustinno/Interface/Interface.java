@@ -1,17 +1,13 @@
 package com.trustinno.win.jobagtrustinno.Interface;
 
+import com.trustinno.win.jobagtrustinno.Authentication.register;
 import com.trustinno.win.jobagtrustinno.Authentication.login;
 import com.trustinno.win.jobagtrustinno.Server.ServerResponse;
-
-import org.json.JSONObject;
+import com.trustinno.win.jobagtrustinno.Server.ServerResponseRegister;
 
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -47,4 +43,16 @@ public interface Interface {
             @Query("password") String password
     );
 
+    @POST("api/register")
+    Call<ServerResponse> register(@Body register register);
+
+
+ //   @GET("/api/register")
+   // Call<ServerResponseRegister> pull(
+            // @Query("method") String method,
+       //     @Query("login_name") String login_name,
+       //     @Query("email") String email,
+        //    @Query("password") String password,
+        /////    @Query("password_confirmation") String password_confirmation
+   // );
 }

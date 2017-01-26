@@ -53,11 +53,11 @@
 
 
                 <AutoCompleteTextView
-                    android:id="@+id/phonenumber"
+                    android:id="@+id/email_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_phonenumber"
-                    android:inputType="phone"
+                    android:hint="@string/prompt_email"
+                    android:inputType="text"
                     android:maxLines="1" />
 
 
@@ -87,24 +87,6 @@
                     android:maxLines="1" />
 
 
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner_1"
-                android:paddingTop="15dp"
-                android:entries="@array/occupation_array"
-                android:prompt="@string/occupation_prompt"
-                android:maxLines="1"/>
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner_2"
-                android:paddingTop="20dp"
-                android:maxLines="1"/>
-
-
             <Button
                 android:id="@+id/register_button"
                 style="?android:textAppearanceSmall"
@@ -113,6 +95,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/logtext_co"
                 android:text="@string/reg_text"
+                android:layout_marginBottom="12dp"
                 android:textStyle="bold" />
 
         </LinearLayout>

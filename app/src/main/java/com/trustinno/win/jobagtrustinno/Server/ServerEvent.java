@@ -6,12 +6,15 @@ package com.trustinno.win.jobagtrustinno.Server;
 
 public class ServerEvent {
     private ServerResponse serverResponse;
-
+    private  ServerResponse serverResponseManager;
     public ServerEvent(ServerResponse serverResponse) {
 
         this.serverResponse = serverResponse;
 
     }
+
+
+
 
     public ServerResponse getServerResponse() {
         return serverResponse;

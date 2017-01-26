@@ -49,15 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-
-            <EditText
-                android:id="@+id/employer_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:hint="@string/companyname_employer"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -67,16 +59,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:ems="10"/>
+                android:ems="10"
+                android:text="@string/prompt_email"/>
+
+
+            <EditText
+                android:id="@+id/employer_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/description"/>
 
 
             <EditText
                 android:id="@+id/employer_position"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/job_position"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
 
             <Spinner

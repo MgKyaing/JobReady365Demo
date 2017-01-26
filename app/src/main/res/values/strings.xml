@@ -55,9 +55,10 @@
     <!--  string related to employer_activity     -->
     <string name="up_text">Upload</string>
     <string name="companyname_employer">Company Name</string>
-    <string name="description_employer">Description</string>
+    <string name="description">Description</string>
     <string name="position_employer">Position</string>
     <string name="employer_price_prompt">Price</string>
+    <string name="job_position">Position</string>
     <string-array name="employer_price_array">
         <item>$100-$200</item>
         <item>$200-$300</item>

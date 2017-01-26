@@ -2,18 +2,21 @@ package com.trustinno.win.jobagtrustinno.Server;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
-
 /**
  * Created by zarni on 1/25/17.
  */
 
-public class ServerResponse  implements Serializable{
+public class ServerResponseRegister {
 
-@SerializedName("email")
-private String email;
+
+    @SerializedName("login_name")
+    private String login_name;
+    @SerializedName("email")
+    private String email;
     @SerializedName("password")
     private String password;
+    @SerializedName("password_confirmation")
+    private String password_confirmation;
     @SerializedName("message")
     private String message;
     @SerializedName("error_code")
@@ -21,22 +24,26 @@ private String email;
     private int status=1;
     private String error;
 
-public ServerResponse(String email,String password,String message,int errorCode,int status,String error){
+    public ServerResponseRegister(String login_name,String email,String password,String password_confirmation,String message,int errorCode,int status,String error){
+        this.login_name=login_name;
+        this.email=email;
+        this.password=password;
+        this.password_confirmation=password_confirmation;
+        this.message=message;
+        this.errorCode=errorCode;
+        this.status=status;
+        this.error=error;
 
-    this.email=email;
-    this.password=password;
-    this.message=message;
-    this.errorCode=errorCode;
-    this.status=status;
-    this.error=error;
-}
 
-    public String getUsername() {
-        return email;
+
     }
 
-    public void setUsername(String username) {
-        this.email = username;
+    public String getLogin_name() {
+    return login_name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -81,3 +88,4 @@ public ServerResponse(String email,String password,String message,int errorCode,
 
 
 }
+
