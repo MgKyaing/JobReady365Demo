@@ -3,18 +3,16 @@ package com.trustinno.win.jobagtrustinno.Authentication;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -25,14 +23,17 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.squareup.otto.Subscribe;
 import com.trustinno.win.jobagtrustinno.Employer.Employer;
 import com.trustinno.win.jobagtrustinno.R;
 import com.trustinno.win.jobagtrustinno.Server.BusProvider;
 import com.trustinno.win.jobagtrustinno.Server.ConnectionHub;
+import com.trustinno.win.jobagtrustinno.Server.ServerEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A login screen that offers login via email/password.
@@ -44,31 +45,36 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-private  Button email_sign_in_button;
+    private Button email_sign_in_button;
     private Button employer_sign_in_button;
     private TextView linkregister;
     public ConnectionHub communicator;
-    private String username,passwords;
+    private String login_name, passwords,result,id,email;
+    private TextView extraInformation;
+    public static String token;
+    public int rdoType,rdotype;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
-        employer_sign_in_button=(Button)findViewById(R.id.sign_in_employer_button);
+        employer_sign_in_button = (Button) findViewById(R.id.sign_in_employer_button);
         employer_sign_in_button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(LoginActivity.this,Employer.class);
+                Intent intent = new Intent(LoginActivity.this, Employer.class);
                 startActivity(intent);
             }
         });
 
 
-        linkregister  = (TextView)findViewById(R.id.linkregister);
+
+        linkregister = (TextView) findViewById(R.id.linkregister);
         linkregister.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -89,7 +95,6 @@ private  Button email_sign_in_button;
         });
 
 
-
         mPasswordView = (EditText) findViewById(R.id.login_password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -101,7 +106,7 @@ private  Button email_sign_in_button;
                 return false;
             }
         });
-
+        extraInformation = (TextView) findViewById(R.id.information);
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -115,12 +120,6 @@ private  Button email_sign_in_button;
     }
 
 
-
-
-
-
-
-
     private void attemptLogin() {
 
 
@@ -131,7 +130,6 @@ private  Button email_sign_in_button;
         // Store values at the time of the login attempt.
         final String email = mEmailView.getText().toString();
         final String password = mPasswordView.getText().toString();
-
         boolean cancel = false;
         View focusView = null;
 
@@ -147,46 +145,101 @@ private  Button email_sign_in_button;
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
         }
+        //else if (!isEmailValid(email)) {
+           // mEmailView.setError(getString(R.string.error_invalid_email));
+           // focusView = mEmailView;
+          //  cancel = true;
+     //   }
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
         } else {
-                communicator =new ConnectionHub();
+            communicator = new ConnectionHub();
             mEmailView = (AutoCompleteTextView) findViewById(R.id.login_email);
-            mPasswordView = (EditText)findViewById(R.id.login_password);
+            mPasswordView = (EditText) findViewById(R.id.login_password);
 
-            email_sign_in_button = (Button)findViewById(R.id.email_sign_in_button);
+            email_sign_in_button = (Button) findViewById(R.id.email_sign_in_button);
             email_sign_in_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                     username= mEmailView.getText().toString();
-                    passwords=mPasswordView .getText().toString();
-                        usePost(username, passwords);
+                    login_name = mEmailView.getText().toString();
+                    passwords = mPasswordView.getText().toString();
+                    usePost(login_name, passwords);
                 }
             });
-              }
+        }
     }
 
-    private void usePost(String username, String password){
-        communicator.loginPost(username, password);
+    private void usePost(String login_name, String password) {
+        communicator.loginPost(login_name, password);
     }
 
+
+    @Subscribe
+    public void onServerEvent(ServerEvent serverEvent) {
+
+
+        if (!serverEvent.getServerResponse().equals(null)) {
+
+           Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse().gettelephone(), Toast.LENGTH_LONG).show();
+          //  extraInformation.setText("" + serverEvent.getServerResponse().getToken()+serverEvent.getServerResponse());
+     //     token = serverEvent.getServerResponse().getToken();
+
+       //    result=serverEvent.getServerResponse().getLogin_name();
+         //   id=serverEvent.getServerResponse().getId();
+           // email=serverEvent.getServerResponse().getemail();
+            //rdoType=serverEvent.getServerResponse().getrdoType();
+           //Id=serverEvent.getServerResponse().getId();
+          //  if (rdoType == 1)
+            //{
+             //   Intent intent = new Intent(this, Employer.class);
+               // intent.putExtra("token", token);
+                //intent.putExtra("email",email);
+                //intent.putExtra("id",id);
+               // startActivity(intent);
+
+            //}
+           // else if (rdoType == 2)
+            //{
+              //  Intent intent = new Intent(this, Employer_profile.class);
+                //intent.putExtra("token", token);
+                //startActivity(intent);
+            //}
+           // else
+           // {
+             //   return;
+
+            //}
+
+            // Intent intent = new Intent(MainLoginActivity.this, JFirstMenuPage.class);
+            //    startActivity(intent)
+        }
+
+
+        // if (serverEvent.getServerResponse().getToken() != null) {
+        // information.setText("Username: " + serverEvent.getServerResponse().getToken() + " || Password: " + serverEvent.getServerResponse().getPassword());
+        //     }
+
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        BusProvider.getInstance().register(this);
+    }
     @Override
     public void onPause(){
         super.onPause();
         BusProvider.getInstance().unregister(this);
     }
-    private boolean isEmailValid(String email) {
+   // private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
-    }
+       // return email.contains("@");
+    //}
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic

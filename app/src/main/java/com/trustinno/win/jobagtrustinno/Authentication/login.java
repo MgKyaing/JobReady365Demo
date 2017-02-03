@@ -5,11 +5,11 @@ package com.trustinno.win.jobagtrustinno.Authentication;
  */
 
 public class login {
-final  String email;
+final  String login_name;
     final String password;
 
-    public login(String email, String password){
-            this.email=email;
+    public login(String login_name, String password){
+            this.login_name=login_name;
             this.password=password;
 
     }

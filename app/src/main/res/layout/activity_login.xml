@@ -44,9 +44,9 @@
                     android:id="@+id/login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
+                    android:hint="@string/prompt_name"
                     android:textStyle="bold"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:maxLines="1"
                     android:textColor="@color/white"/>
 
@@ -97,6 +97,12 @@
                 android:layout_gravity="center"
                 android:text="@string/newac"
                 />
+            <TextView
+                android:id="@+id/information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                />
             <!--<Button
                 android:id="@+id/sign_in_employer_button"
                 style="?android:textAppearanceSmall"
@@ -116,10 +122,7 @@
                 android:textStyle="bold"
                 android:background="@color/logtext_co"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+
         </LinearLayout>
     </ScrollView>
 

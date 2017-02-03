@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.trustinno.win.jobagtrustinno.EmployerMenuPage">
+    tools:context="com.trustinno.win.jobagtrustinno.Employer.EmployerMenuPage">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

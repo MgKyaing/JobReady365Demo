@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno;
+package com.trustinno.win.jobagtrustinno.Employer;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;

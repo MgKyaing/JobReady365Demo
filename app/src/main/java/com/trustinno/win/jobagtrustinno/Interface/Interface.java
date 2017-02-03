@@ -1,9 +1,9 @@
 package com.trustinno.win.jobagtrustinno.Interface;
 
-import com.trustinno.win.jobagtrustinno.Authentication.register;
 import com.trustinno.win.jobagtrustinno.Authentication.login;
+import com.trustinno.win.jobagtrustinno.Authentication.register;
+import com.trustinno.win.jobagtrustinno.Employer.employerjob_upload;
 import com.trustinno.win.jobagtrustinno.Server.ServerResponse;
-import com.trustinno.win.jobagtrustinno.Server.ServerResponseRegister;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -43,11 +43,14 @@ public interface Interface {
             @Query("password") String password
     );
 
-    @POST("api/register")
+    @POST("/api/register")
     Call<ServerResponse> register(@Body register register);
 
 
- //   @GET("/api/register")
+    @POST("/api/employer")
+    Call<ServerResponse> employerjob_upload(@Body employerjob_upload employerjob_upload);
+
+    //   @GET("/api/register")
    // Call<ServerResponseRegister> pull(
             // @Query("method") String method,
        //     @Query("login_name") String login_name,

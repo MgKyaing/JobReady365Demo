@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_employer"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -15,7 +16,7 @@
 
 
 
-    <ProgressBar
+  <!--  <ProgressBar
         android:id="@+id/login_progress"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
@@ -35,13 +36,24 @@
             android:orientation="vertical">
 
             <TextView
-                android:text="@string/reg_text"
+                android:text="@string/up_text"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textStyle="bold"
+                android:layout_gravity="center"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
 
             <EditText
@@ -54,14 +66,106 @@
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
+
+            <EditText
+                android:id="@+id/moblie_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Mobile No"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Contact No"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/employer_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
                 android:ems="10"
-                android:text="@string/prompt_email"/>
+                android:hint="@string/prompt_email"/>
 
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:ems="10"
+                android:hint="@string/prompt_email"/>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="Address"/>
+
+
+            <EditText
+                android:id="@+id/township"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="Township"/>
+
+
+            <EditText
+                android:id="@+id/postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="Postal Code"/>
+
+
+            <EditText
+                android:id="@+id/City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="City"/>
+
+
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="Country"/>
+
+
+            <EditText
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="Website"/>
 
             <EditText
                 android:id="@+id/employer_description"
@@ -70,21 +174,33 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:text="@string/description"/>
+                android:hint="@string/description"/>-->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/texttoken"
+    android:text="blabla"/>
 
 
-            <EditText
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/idtext"
+      android:hint="bla"/>
+
+
+           <!-- <EditText
                 android:id="@+id/employer_position"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/job_position"
+                android:hint="@string/job_position"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                />
+                />-->
 
 
-            <Spinner
+<!--            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner_1"
@@ -105,16 +221,15 @@
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:id="@+id/spinner_2"
                 android:entries="@array/employer_jobtype_array"
                 android:prompt="@string/employer_jobtype_prompt"
                 android:paddingTop="20dp"
                 android:maxLines="1"/>
+-->
 
-
-            <Button
-                android:id="@+id/register_button"
+     <!--       <Button
+                android:id="@+id/employer_jobupload_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,5 +239,5 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+    </ScrollView>-->
+</LinearLayout>
