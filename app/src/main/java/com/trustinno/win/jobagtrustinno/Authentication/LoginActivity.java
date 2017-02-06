@@ -184,7 +184,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         if (!serverEvent.getServerResponse().equals(null)) {
 
-           Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse().gettelephone(), Toast.LENGTH_LONG).show();
+           Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
           //  extraInformation.setText("" + serverEvent.getServerResponse().getToken()+serverEvent.getServerResponse());
      //     token = serverEvent.getServerResponse().getToken();
 
