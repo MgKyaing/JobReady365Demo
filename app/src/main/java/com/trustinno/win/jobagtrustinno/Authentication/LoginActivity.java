@@ -31,6 +31,7 @@ import com.trustinno.win.jobagtrustinno.R;
 import com.trustinno.win.jobagtrustinno.Server.BusProvider;
 import com.trustinno.win.jobagtrustinno.Server.ConnectionHub;
 import com.trustinno.win.jobagtrustinno.Server.ServerEvent;
+import com.trustinno.win.jobagtrustinno.datastore.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private TextView extraInformation;
     public static String token;
     public int rdoType,rdotype;
+    public String userId,userlogin_name,users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -184,7 +186,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         if (!serverEvent.getServerResponse().equals(null)) {
 
-           Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
+        //   Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
+            List<User> user=serverEvent.getServerResponse().getUserList();
+           User users=user.get(0);
+            userId=users.getId();
+            Toast.makeText(getApplicationContext(),userId,Toast.LENGTH_LONG).show();
+
+
           //  extraInformation.setText("" + serverEvent.getServerResponse().getToken()+serverEvent.getServerResponse());
      //     token = serverEvent.getServerResponse().getToken();
 
