@@ -18,6 +18,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
+    <string name="register_telephoneno">Telephone No.</string>
     <string name="action_sign_in">Sign in </string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -27,6 +28,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="employer">Employer</string>
+    <string name="employee">Employee</string>
     <string name="action_next">Next</string>
     <string name="login_text">Sign in</string>
     <string name="newac">Create New Account</string>

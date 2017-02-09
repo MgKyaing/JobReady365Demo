@@ -23,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ConnectionHub {
     private static final String TAG = "ConnectionHub";
-    private static final String SERVER_URL = "http://goldenictsolutions.com/";
+    private static final String SERVER_URL = "http://myanmar-online.com/";
     private static final String token= LoginActivity.token;
 
 
@@ -66,7 +66,7 @@ public class ConnectionHub {
 
     }
 
-    public void registerPost(String login_name, String email, String password, int rdoType) {
+    public void registerPost(String login_name, String email,String telephone_no, String password, String user_type,String category_id) {
 
         final HttpLoggingInterceptor register = new HttpLoggingInterceptor();
         register.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -80,7 +80,7 @@ public class ConnectionHub {
 
         Interface service = retrofit.create(Interface.class);
 
-        Call<ServerResponse> call = service.register(new register(login_name, email, password, rdoType));
+        Call<ServerResponse> call = service.register(new register(login_name, email,telephone_no, password, user_type,category_id));
         call.enqueue(new Callback<ServerResponse>() {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {

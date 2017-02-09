@@ -7,11 +7,11 @@ import com.trustinno.win.jobagtrustinno.Server.ServerResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
-
 
 
 /**
@@ -24,10 +24,10 @@ public interface Interface {
             "Content-Type: application/json",
             //  "Authorization: Basic ZWlwaHl1cGh5dWhsYWluZ0BnbWFpbC5jb206MTIzNDU2Nzg="
     })
-    //@FormUrlEncoded
+    @FormUrlEncoded
     @POST("/api/login")
         //Call<ServerResponse> post(@Body @Root("email") String email,@Root("password") String password);
-    Call<ServerResponse> post( @Body login body);
+    Call<ServerResponse> post(@Body login body);
     //Call<ServerResponse> post(@Body login login);
    /* Call<ServerResponse> post(
             //@Field("method") String method,
@@ -44,18 +44,20 @@ public interface Interface {
     );
 
     @POST("/api/register")
-    Call<ServerResponse> register(@Body register register);
+    Call<ServerResponse> register(
+            @Body register register
+    );
 
 
     @POST("/api/employer")
     Call<ServerResponse> employerjob_upload(@Body employerjob_upload employerjob_upload);
 
     //   @GET("/api/register")
-   // Call<ServerResponseRegister> pull(
-            // @Query("method") String method,
-       //     @Query("login_name") String login_name,
-       //     @Query("email") String email,
-        //    @Query("password") String password,
-        /////    @Query("password_confirmation") String password_confirmation
-   // );
+    // Call<ServerResponseRegister> pull(
+    // @Query("method") String method,
+    //     @Query("login_name") String login_name,
+    //     @Query("email") String email,
+    //    @Query("password") String password,
+    /////    @Query("password_confirmation") String password_confirmation
+    // );
 }

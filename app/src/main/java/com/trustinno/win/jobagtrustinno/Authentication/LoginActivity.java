@@ -50,11 +50,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private Button employer_sign_in_button;
     private TextView linkregister;
     public ConnectionHub communicator;
-    private String login_name, passwords,result,id,email;
+    private String login_name, passwords, result, id, email;
     private TextView extraInformation;
     public static String token;
-    public int rdoType,rdotype;
-    public String userId,userlogin_name,users;
+    public int rdoType, rdotype;
+    public String userId, userlogin_name, users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 startActivity(intent);
             }
         });
-
 
 
         linkregister = (TextView) findViewById(R.id.linkregister);
@@ -149,10 +148,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             cancel = true;
         }
         //else if (!isEmailValid(email)) {
-           // mEmailView.setError(getString(R.string.error_invalid_email));
-           // focusView = mEmailView;
-          //  cancel = true;
-     //   }
+        // mEmailView.setError(getString(R.string.error_invalid_email));
+        // focusView = mEmailView;
+        //  cancel = true;
+        //   }
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -183,51 +182,53 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Subscribe
     public void onServerEvent(ServerEvent serverEvent) {
 
+         if (!serverEvent.getServerResponse().equals(null)) {
 
-        if (!serverEvent.getServerResponse().equals(null)) {
-
-        //   Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
-            List<User> user=serverEvent.getServerResponse().getUserList();
-           User users=user.get(0);
-            userId=users.getId();
-            Toast.makeText(getApplicationContext(),userId,Toast.LENGTH_LONG).show();
+            //   Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
+            List<User> user = serverEvent.getServerResponse().getUserList();
+            User users = user.get(0);
+            userId = users.getId();
+            Toast.makeText(getApplicationContext(), userId, Toast.LENGTH_LONG).show();
 
 
-          //  extraInformation.setText("" + serverEvent.getServerResponse().getToken()+serverEvent.getServerResponse());
-     //     token = serverEvent.getServerResponse().getToken();
+            //  extraInformation.setText("" + serverEvent.getServerResponse().getToken()+serverEvent.getServerResponse());
+            //     token = serverEvent.getServerResponse().getToken();
 
-       //    result=serverEvent.getServerResponse().getLogin_name();
-         //   id=serverEvent.getServerResponse().getId();
-           // email=serverEvent.getServerResponse().getemail();
+            //    result=serverEvent.getServerResponse().getLogin_name();
+            //   id=serverEvent.getServerResponse().getId();
+            // email=serverEvent.getServerResponse().getemail();
             //rdoType=serverEvent.getServerResponse().getrdoType();
-           //Id=serverEvent.getServerResponse().getId();
-          //  if (rdoType == 1)
+            //Id=serverEvent.getServerResponse().getId();
+            //  if (rdoType == 1)
             //{
-             //   Intent intent = new Intent(this, Employer.class);
-               // intent.putExtra("token", token);
-                //intent.putExtra("email",email);
-                //intent.putExtra("id",id);
-               // startActivity(intent);
+            //   Intent intent = new Intent(this, Employer.class);
+            // intent.putExtra("token", token);
+            //intent.putExtra("email",email);
+            //intent.putExtra("id",id);
+            // startActivity(intent);
 
             //}
-           // else if (rdoType == 2)
+            // else if (rdoType == 2)
             //{
-              //  Intent intent = new Intent(this, Employer_profile.class);
-                //intent.putExtra("token", token);
-                //startActivity(intent);
+            //  Intent intent = new Intent(this, Employer_profile.class);
+            //intent.putExtra("token", token);
+            //startActivity(intent);
             //}
-           // else
-           // {
-             //   return;
+            // else
+            // {
+            //   return;
 
             //}
 
             // Intent intent = new Intent(MainLoginActivity.this, JFirstMenuPage.class);
             //    startActivity(intent)
         }
+         if (serverEvent.getServerResponse()==null){
+             Toast.makeText(getApplicationContext(), "Login failed please try again", Toast.LENGTH_LONG).show();
 
+         }
 
-        // if (serverEvent.getServerResponse().getToken() != null) {
+             // if (serverEvent.getServerResponse().getToken() != null) {
         // information.setText("Username: " + serverEvent.getServerResponse().getToken() + " || Password: " + serverEvent.getServerResponse().getPassword());
         //     }
 
@@ -239,14 +240,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onResume();
         BusProvider.getInstance().register(this);
     }
+
     @Override
-    public void onPause(){
+    public void onPause() {
         super.onPause();
         BusProvider.getInstance().unregister(this);
     }
-   // private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-       // return email.contains("@");
+    // private boolean isEmailValid(String email) {
+    //TODO: Replace this with your own logic
+    // return email.contains("@");
     //}
 
     private boolean isPasswordValid(String password) {
@@ -350,5 +352,5 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * the user.
      */
 
-    }
+}
 
