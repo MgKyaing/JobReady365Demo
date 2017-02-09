@@ -5,6 +5,10 @@
     <color name="auth_background">#673ab7</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
+    <color name="whitelight">#03ffffff</color>
     <color name="logtext_co">#0288b1</color>
     <color name="loginbackground">#ede7f6</color>
+    <color name="yellow">#fadd04</color>
+    <color name="textbar">#2979ff</color>
+
 </resources>

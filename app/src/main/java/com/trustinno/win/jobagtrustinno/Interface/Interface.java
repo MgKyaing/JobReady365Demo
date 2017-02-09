@@ -7,7 +7,6 @@ import com.trustinno.win.jobagtrustinno.Server.ServerResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
@@ -24,7 +23,7 @@ public interface Interface {
             "Content-Type: application/json",
             //  "Authorization: Basic ZWlwaHl1cGh5dWhsYWluZ0BnbWFpbC5jb206MTIzNDU2Nzg="
     })
-    @FormUrlEncoded
+   // @FormUrlEncoded
     @POST("/api/login")
         //Call<ServerResponse> post(@Body @Root("email") String email,@Root("password") String password);
     Call<ServerResponse> post(@Body login body);
