@@ -165,7 +165,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @Subscribe
     public void onServerEvent(ServerEvent serverEvent) {
-
         if (!serverEvent.getServerResponse().equals(null)) {
                Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
             //List<User> user = serverEvent.getServerResponse().getUserList();

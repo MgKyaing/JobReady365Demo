@@ -27,6 +27,7 @@
             android:name=".Authentication.LoginActivity"
             android:label="@string/action_sign_in" />
         <activity
+            android:theme="@style/Theme"
             android:name=".Authentication.RegisterActivity"
             android:label="@string/title_activity_register" />
         <activity android:name=".Employer.EmployerCV" />
