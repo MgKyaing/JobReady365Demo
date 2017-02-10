@@ -59,6 +59,7 @@ public class ConnectionHub {
             public void onFailure(Call<ServerResponse> call, Throwable t) {
 
 
+                Log.e(TAG, "Failure " + t.getMessage());
                 BusProvider.getInstance().post(new ErrorEvent(-2, t.getMessage()));
 
             }

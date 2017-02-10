@@ -21,6 +21,7 @@ import com.trustinno.win.jobagtrustinno.Employer.Employer_profile;
 import com.trustinno.win.jobagtrustinno.R;
 import com.trustinno.win.jobagtrustinno.Server.BusProvider;
 import com.trustinno.win.jobagtrustinno.Server.ConnectionHub;
+import com.trustinno.win.jobagtrustinno.Server.ErrorEvent;
 import com.trustinno.win.jobagtrustinno.Server.ServerEvent;
 
 /**
@@ -165,13 +166,22 @@ public class LoginActivity extends AppCompatActivity {
 
     @Subscribe
     public void onServerEvent(ServerEvent serverEvent) {
-        if (!serverEvent.getServerResponse().equals(null)) {
-               Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_LONG).show();
+
+        if (serverEvent.getServerResponse() == null)
+        {
+            Toast.makeText(getApplicationContext(), "blabla", Toast.LENGTH_LONG).show();
+        }
+
+       if (serverEvent.getServerResponse().getToken() != null){
+               Toast.makeText(getApplicationContext(), "Success ServerEvent Respond" + serverEvent.getServerResponse(), Toast.LENGTH_SHORT).show();
             //List<User> user = serverEvent.getServerResponse().getUserList();
             //User users = user.get(0);
            // userId = users.getId();
+
             Intent intent=new Intent(LoginActivity.this,Employer_profile.class);
             startActivity(intent);
+            }
+
           //  Toast.makeText(getApplicationContext(), userId, Toast.LENGTH_LONG).show();
             //  extraInformation.setText("" + serverEvent.getServerResponse().getToken()+serverEvent.getServerResponse());
             //     token = serverEvent.getServerResponse().getToken();
@@ -208,7 +218,7 @@ public class LoginActivity extends AppCompatActivity {
   //      if (serverEvent.getServerResponse() == null) {
     //        Toast.makeText(getApplicationContext(), "Login failed please try again", Toast.LENGTH_LONG).show();
 
-        }
+
 
         // if (serverEvent.getServerResponse().getToken() != null) {
         // information.setText("Username: " + serverEvent.getServerResponse().getToken() + " || Password: " + serverEvent.getServerResponse().getPassword());
@@ -217,6 +227,10 @@ public class LoginActivity extends AppCompatActivity {
 //    }
 
 
+    @Subscribe
+    public void onErrorEvent (ErrorEvent errorEvent){
+        Toast.makeText(this, "onErrorEvent fail " + errorEvent.getErrroMsg(), Toast.LENGTH_SHORT).show();
+    }
     @Override
     public void onResume() {
         super.onResume();

@@ -31,11 +31,13 @@ public class ServerResponse {
 
     @SerializedName("status_code")
     private int statusCode;
+
     @SerializedName("user")
      private List<User> userList;
 
-    public  ServerResponse(String id,String login_name,String telephone_no){
+    public  ServerResponse(String id,String login_name,String telephone_no,Boolean error){
             this.id=id;
+        this.error=error;
         this.login_name=login_name;
         this.telephone_no=telephone_no;
     }
@@ -64,7 +66,6 @@ public class ServerResponse {
 
         return id;
     }
-
     public String getLogin_name(){
         return login_name;
     }
