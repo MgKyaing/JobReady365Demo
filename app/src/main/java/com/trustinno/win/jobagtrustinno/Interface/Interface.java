@@ -2,7 +2,6 @@ package com.trustinno.win.jobagtrustinno.Interface;
 
 import com.trustinno.win.jobagtrustinno.Authentication.login;
 import com.trustinno.win.jobagtrustinno.Authentication.register;
-import com.trustinno.win.jobagtrustinno.Employer.employerjob_upload;
 import com.trustinno.win.jobagtrustinno.Server.ServerResponse;
 
 import retrofit2.Call;
@@ -48,8 +47,6 @@ public interface Interface {
     );
 
 
-    @POST("/api/employer")
-    Call<ServerResponse> employerjob_upload(@Body employerjob_upload employerjob_upload);
 
     //   @GET("/api/register")
     // Call<ServerResponseRegister> pull(

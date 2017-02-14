@@ -67,8 +67,8 @@ public class RegisterActivity extends AppCompatActivity {
         //     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         //   startActivity(intent);
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
+      //  mLoginFormView = findViewById(R.id.login_form);
+    //    mProgressView = findViewById(R.id.login_progress);
     }
 
 

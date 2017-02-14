@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.otto.Subscribe;
-import com.trustinno.win.jobagtrustinno.Employer.Employer_profile;
+import com.trustinno.win.jobagtrustinno.Employer.Employer;
 import com.trustinno.win.jobagtrustinno.R;
 import com.trustinno.win.jobagtrustinno.Server.BusProvider;
 import com.trustinno.win.jobagtrustinno.Server.ConnectionHub;
@@ -178,7 +178,7 @@ public class LoginActivity extends AppCompatActivity {
             //User users = user.get(0);
            // userId = users.getId();
 
-            Intent intent=new Intent(LoginActivity.this,Employer_profile.class);
+            Intent intent=new Intent(LoginActivity.this,Employer.class);
             startActivity(intent);
             }
 

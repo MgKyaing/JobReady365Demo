@@ -31,6 +31,9 @@ public class Employer extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        android.support.v4.app.FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container,new Employer_jobupload());
+        fragmentTransaction.commit();
 
     }
 
@@ -64,6 +67,7 @@ public class Employer extends AppCompatActivity
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -72,13 +76,23 @@ public class Employer extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        android.support.v4.app.FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         if (id == R.id.nav_employer_jobupload) {
+            fragmentTransaction.replace(R.id.container,new Employer_jobupload());
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_employercv) {
 
+
+
         } else if (id == R.id.nav_employer_profile) {
 
+            fragmentTransaction.replace(R.id.container,new Employer_profile());
+            fragmentTransaction.commit();
+
         } else if (id == R.id.nav_contactus) {
+
+
 
         } else if (id == R.id.nav_aboutus) {
 

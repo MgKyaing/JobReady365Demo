@@ -16,8 +16,6 @@ android {
         main {
             res.srcDirs =
                     [
-                            'src/main/res/layouts/layout_employer',
-                            'src/main/res/layouts',
                             'src/main/res'
                     ]
         }
