@@ -23,6 +23,9 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_employer"
         app:menu="@menu/activity_employer_drawer" />
+<include
+    layout="@layout/content_employer"
 
+    />
 
 </android.support.v4.widget.DrawerLayout>
