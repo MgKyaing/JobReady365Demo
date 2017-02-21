@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Employer;
+package com.trustinno.win.jobagtrustinno.znk.Employer;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

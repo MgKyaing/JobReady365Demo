@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Server;
+package com.trustinno.win.jobagtrustinno.znk.Server;
 
 /**
  * Created by zarni on 1/25/17.

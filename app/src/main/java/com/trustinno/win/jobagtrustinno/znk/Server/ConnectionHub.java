@@ -1,12 +1,12 @@
-package com.trustinno.win.jobagtrustinno.Server;
+package com.trustinno.win.jobagtrustinno.znk.Server;
 
 import android.util.Log;
 
 import com.squareup.otto.Produce;
-import com.trustinno.win.jobagtrustinno.Authentication.LoginActivity;
-import com.trustinno.win.jobagtrustinno.Authentication.login;
-import com.trustinno.win.jobagtrustinno.Authentication.register;
-import com.trustinno.win.jobagtrustinno.Interface.Interface;
+import com.trustinno.win.jobagtrustinno.znk.Authentication.LoginActivity;
+import com.trustinno.win.jobagtrustinno.znk.Authentication.login;
+import com.trustinno.win.jobagtrustinno.znk.Authentication.register;
+import com.trustinno.win.jobagtrustinno.znk.Interface.Interface;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

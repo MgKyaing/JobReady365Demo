@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Authentication;
+package com.trustinno.win.jobagtrustinno.znk.Authentication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,9 +13,9 @@ import android.widget.Toast;
 
 import com.squareup.otto.Subscribe;
 import com.trustinno.win.jobagtrustinno.R;
-import com.trustinno.win.jobagtrustinno.Server.BusProvider;
-import com.trustinno.win.jobagtrustinno.Server.ConnectionHub;
-import com.trustinno.win.jobagtrustinno.Server.ServerEvent;
+import com.trustinno.win.jobagtrustinno.znk.Server.BusProvider;
+import com.trustinno.win.jobagtrustinno.znk.Server.ConnectionHub;
+import com.trustinno.win.jobagtrustinno.znk.Server.ServerEvent;
 
 /**
  * A login screen that offers login via email/password.

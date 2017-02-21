@@ -1,7 +1,7 @@
-package com.trustinno.win.jobagtrustinno.Server;
+package com.trustinno.win.jobagtrustinno.znk.Server;
 
 import com.google.gson.annotations.SerializedName;
-import com.trustinno.win.jobagtrustinno.datastore.User;
+import com.trustinno.win.jobagtrustinno.znk.datastore.User;
 
 import java.util.List;
 

@@ -24,14 +24,14 @@
         </activity>
         <activity
             android:theme="@style/Theme"
-            android:name=".Authentication.LoginActivity"
+            android:name=".znk.Authentication.LoginActivity"
             android:label="@string/action_sign_in" />
         <activity
             android:theme="@style/Theme"
-            android:name=".Authentication.RegisterActivity"
+            android:name=".znk.Authentication.RegisterActivity"
             android:label="@string/title_activity_register" />
         <activity
-            android:name=".Employer.Employer"
+            android:name=".znk.Employer.Employer"
             android:label="@string/title_activity_employer"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

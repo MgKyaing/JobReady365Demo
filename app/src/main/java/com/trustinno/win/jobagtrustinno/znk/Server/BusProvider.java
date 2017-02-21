@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Server;
+package com.trustinno.win.jobagtrustinno.znk.Server;
 
 import com.squareup.otto.Bus;
 

@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Authentication;
+package com.trustinno.win.jobagtrustinno.znk.Authentication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +17,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.otto.Subscribe;
-import com.trustinno.win.jobagtrustinno.Employer.Employer;
+import com.trustinno.win.jobagtrustinno.znk.Employer.Employer;
 import com.trustinno.win.jobagtrustinno.R;
-import com.trustinno.win.jobagtrustinno.Server.BusProvider;
-import com.trustinno.win.jobagtrustinno.Server.ConnectionHub;
-import com.trustinno.win.jobagtrustinno.Server.ErrorEvent;
-import com.trustinno.win.jobagtrustinno.Server.ServerEvent;
+import com.trustinno.win.jobagtrustinno.znk.Server.BusProvider;
+import com.trustinno.win.jobagtrustinno.znk.Server.ConnectionHub;
+import com.trustinno.win.jobagtrustinno.znk.Server.ErrorEvent;
+import com.trustinno.win.jobagtrustinno.znk.Server.ServerEvent;
 
 /**
  * A login screen that offers login via email/password.
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         // Set up the login form.
         ImageView myImageView = (ImageView) findViewById(R.id.loginlogo);
-        Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.animator.fade_in);
+        Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.animator.employer_fade_in);
         myImageView.startAnimation(myFadeInAnimation);
 
       employer_sign_in_button = (Button) findViewById(R.id.sign_in_employer_button);

@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Authentication;
+package com.trustinno.win.jobagtrustinno.znk.Authentication;
 
 /**
  * Created by zarni on 1/25/17.

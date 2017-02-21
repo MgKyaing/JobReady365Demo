@@ -1,8 +1,8 @@
-package com.trustinno.win.jobagtrustinno.Interface;
+package com.trustinno.win.jobagtrustinno.znk.Interface;
 
-import com.trustinno.win.jobagtrustinno.Authentication.login;
-import com.trustinno.win.jobagtrustinno.Authentication.register;
-import com.trustinno.win.jobagtrustinno.Server.ServerResponse;
+import com.trustinno.win.jobagtrustinno.znk.Authentication.login;
+import com.trustinno.win.jobagtrustinno.znk.Authentication.register;
+import com.trustinno.win.jobagtrustinno.znk.Server.ServerResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

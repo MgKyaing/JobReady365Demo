@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.trustinno.win.jobagtrustinno.Authentication.LoginActivity;
+import com.trustinno.win.jobagtrustinno.znk.Authentication.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 

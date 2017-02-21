@@ -1,4 +1,4 @@
-package com.trustinno.win.jobagtrustinno.Authentication;
+package com.trustinno.win.jobagtrustinno.znk.Authentication;
 
 import android.view.View;
 import android.widget.AdapterView;

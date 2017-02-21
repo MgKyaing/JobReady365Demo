@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    tools:context="com.trustinno.win.jobagtrustinno.Authentication.RegisterActivity">
+    tools:context="com.trustinno.win.jobagtrustinno.znk.Authentication.RegisterActivity">
 
     <!-- Login progress -->
     <ImageView
